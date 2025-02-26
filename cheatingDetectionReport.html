@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheating Detection Report</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-roboto">
+    <div class="flex">
+        <aside class="w-1/4 bg-white shadow-md h-screen p-5">
+            <h2 class="text-2xl font-bold mb-5">Navigation</h2>
+            <ul>
+                <li class="mb-3"><a href="dashboard.html" class="text-gray-700 hover:text-blue-500"><i class="fas fa-tachometer-alt mr-2"></i> Dashboard</a></li>
+                <li class="mb-3"><a href="createQuiz.html" class="text-gray-700 hover:text-blue-500"><i class="fas fa-plus-circle mr-2"></i> Create Quiz</a></li>
+                <li class="mb-3"><a href="quizInterface.html" class="text-gray-700 hover:text-blue-500"><i class="fas fa-file-alt mr-2"></i> Quiz Interface</a></li>
+                <li class="mb-3"><a href="quizManagementPage.html" class="text-gray-700 hover:text-blue-500"><i class="fas fa-chart-line mr-2"></i> Quiz Management</a></li>
+            </ul>
+        </aside>
+        <main class="flex-1 p-10">
+            <h1 class="text-3xl font-bold mb-5">Cheating Detection Report</h1>
+            <div class="bg-white p-5 rounded-lg shadow-md mb-6">
+                <h2 class="text-xl font-semibold mb-4">Students Who Attempted the Quiz</h2>
+                <table class="min-w-full bg-white">
+                    <thead>
+                        <tr>
+                            <th class="py-2 px-3 border-b">Name</th>
+                            <th class="py-2 px-3 border-b">Roll Number</th>
+                            <th class="py-2 px-3 border-b">Score</th>
+                            <th class="py-2 px-3 border-b">Cheating Risk Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="py-2 px-3 border-b">John Doe</td>
+                            <td class="py-2 px-3 border-b">12345</td>
+                            <td class="py-2 px-3 border-b">85</td>
+                            <td class="py-2 px-3 border-b"><span class="text-green-500 font-bold">🟢 20%</span></td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-3 border-b">Jane Smith</td>
+                            <td class="py-2 px-3 border-b">67890</td>
+                            <td class="py-2 px-3 border-b">60</td>
+                            <td class="py-2 px-3 border-b"><span class="text-yellow-500 font-bold">🟡 50%</span></td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-3 border-b">Alice Johnson</td>
+                            <td class="py-2 px-3 border-b">54321</td>
+                            <td class="py-2 px-3 border-b">45</td>
+                            <td class="py-2 px-3 border-b"><span class="text-red-500 font-bold">🔴 80%</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="bg-white p-5 rounded-lg shadow-md">
+                <h2 class="text-xl font-semibold mb-4">AI Detected Cheating Instances</h2>
+                <div class="mb-6">
+                    <h3 class="font-semibold">Tab Switch Count</h3>
+                    <p>John Doe: 1</p>
+                    <p>Jane Smith: 0</p>
+                    <p>Alice Johnson: 3</p>
+                </div>
+                <div class="mb-6">
+                    <h3 class="font-semibold">Time-Based Response Analysis</h3>
+                    <p>John Doe: Normal</p>
+                    <p>Jane Smith: Slightly Fast</p>
+                    <p>Alice Johnson: Very Fast</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold">Copy-Paste Attempts</h3>
+                    <p>John Doe: 0</p>
+                    <p>Jane Smith: 1</p>
+                    <p>Alice Johnson: 2</p>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

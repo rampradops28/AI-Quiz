@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Based Quiz Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-roboto" id="createQuiz">
+    <div class="flex">
+        <aside class="w-1/4 bg-white shadow-md h-screen p-5">
+            <h2 class="text-2xl font-bold mb-5">Navigation</h2>
+            <ul>
+                <li class="mb-3"><a href="dashboard.html" class="text-gray-700 hover:text-blue-500"><i class="fas fa-tachometer-alt mr-2"></i> Dashboard</a></li>
+                <li class="mb-3"><a href="createQuiz.html" class="text-gray-700 hover:text-blue-500"><i class="fas fa-plus-circle mr-2"></i> Create Quiz</a></li>
+                <li class="mb-3"><a href="quizInterface.html" class="text-gray-700 hover:text-blue-500"><i class="fas fa-file-alt mr-2"></i> Quiz Interface</a></li>
+                <li class="mb-3"><a href="quizManagementPage.html" class="text-gray-700 hover:text-blue-500"><i class="fas fa-chart-line mr-2"></i> Quiz Management</a></li>
+            </ul>
+        </aside>
+        <main class="flex-1 p-10">
+            <h1 class="text-3xl font-bold mb-5">Welcome, Professor [Name]</h1>
+            <div class="bg-white p-5 rounded-lg shadow-md">
+                <h2 class="text-xl font-semibold mb-4">AI-Based Quiz Generator</h2>
+                <div class="step mb-6">
+                    <h3 class="font-semibold">Step 1: Upload Book/Lecture Material</h3>
+                    <input type="file" accept=".pdf,.docx,.txt" class="border border-gray-300 rounded-lg p-2 mb-3 w-full" />
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded-lg">Upload</button>
+                </div>
+                <div class="step mb-6">
+                    <h3 class="font-semibold">Step 2: Choose Quiz Type</h3>
+                    <div class="mb-3">
+                        <label class="block mb-1">Page Range:</label>
+                        <input type="number" placeholder="Start Page" class="border border-gray-300 rounded-lg p-2 w-1/2 mr-2" />
+                        <input type="number" placeholder="End Page" class="border border-gray-300 rounded-lg p-2 w-1/2" />
+                    </div>
+                    <div class="mb-3">
+                        <label class="block mb-1">Topic-Based Selection:</label>
+                        <select class="border border-gray-300 rounded-lg p-2 w-full">
+                            <option>Select Topic</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="block mb-1">Question Type:</label>
+                        <select class="border border-gray-300 rounded-lg p-2 w-full">
+                            <option>Multiple Choice</option>
+                            <option>Fill in the Blanks</option>
+                            <option>True/False</option>
+                            <option>Short Answers</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="step mb-6">
+                    <h3 class="font-semibold">Step 3: Generate & Preview Questions</h3>
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded-lg mb-3">Generate Questions</button>
+                    <div class="loading-animation mb-3 hidden">
+                        <i class="fas fa-spinner fa-spin"></i> Generating questions...
+                    </div>
+                    <div class="questions-preview">
+                        <h4 class="font-semibold">Generated Questions:</h4>
+                        <ul class="list-disc pl-5">
+                            <li>Question 1 <button class="text-red-500">Remove</button></li>
+                            <li>Question 2 <button class="text-red-500">Remove</button></li>
+                        </ul>
+                    </div>
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded-lg">Regenerate</button>
+                </div>
+                <div class="step mb-6">
+                    <h3 class="font-semibold">Step 4: Quiz Settings & Publish</h3>
+                    <div class="mb-3">
+                        <label class="block mb-1">Set Time Limit (minutes):</label>
+                        <input type="number" class="border border-gray-300 rounded-lg p-2 w-full" />
+                    </div>
+                    <div class="mb-3">
+                        <label class="inline-flex items-center">
+                            <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600" />
+                            <span class="ml-2">Enable Cheating Prevention</span>
+                        </label>
+                    </div>
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded-lg">Publish Quiz</button>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
